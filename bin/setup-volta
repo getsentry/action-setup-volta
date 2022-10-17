@@ -10,17 +10,17 @@ import sys
 import tarfile
 import urllib.request
 
-VOLTA = "1.0.8"
+VOLTA = "1.1.0"
 VOLTA_DIR = os.path.expanduser("~/.volta")
 VOLTA_BIN = os.path.join(VOLTA_DIR, "bin")
 
 URL = {
     "darwin": f"https://github.com/volta-cli/volta/releases/download/v{VOLTA}/volta-{VOLTA}-macos.tar.gz",
-    "linux": f"https://github.com/volta-cli/volta/releases/download/v{VOLTA}/volta-{VOLTA}-linux-openssl-1.1.tar.gz",
+    "linux": f"https://github.com/volta-cli/volta/releases/download/v{VOLTA}/volta-{VOLTA}-linux.tar.gz",
 }
 SHA256 = {
-    "darwin": "b07461399f934b43bb34dfb0541eaf398537ccddcd2955166567459de52159dd",
-    "linux": "981b61a35e0070b0a998361cdbc9040c99b7fb64b6fee0cc2de52243a1851412",
+    "darwin": "03d670c060f0a7f8d48e7f943197fe5f007301a26de8abbbe3d100b63c528cdd",
+    "linux": "4fa5b7017a3f0afa06399f4bd603abf8117ca91c380cca036c92bb7e8ebccb6c",
 }
 
 
