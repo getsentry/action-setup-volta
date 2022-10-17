@@ -1,0 +1,13 @@
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: |
+        echo '{"volta": {"node": "16.13.1", "yarn": "1.22.5"}}' > package.json
+    - uses: ./
