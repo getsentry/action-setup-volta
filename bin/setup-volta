@@ -32,6 +32,10 @@ def _command_vars() -> int:
     with open("package.json") as f:
         package_json = json.load(f)
 
+    if "extends" in package_json["volta"]:
+        with open(package_json["volta"]["extends"]) as f:
+            package_json = json.load(f)
+
     node = package_json["volta"]["node"]
     yarn = package_json["volta"]["yarn"]
 
